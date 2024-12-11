@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">  
+    <title>Daftar Buku</title>  
+</head>  
+<body>  
+    <header>  
+        <h1>Daftar Buku Saya</h1>  
+        <p>Selamat datang! Di sini Anda dapat menambahkan dan melihat daftar buku yang telah Anda baca.</p>  
+    </header>  
+    
+    <main>  
+        <section>  
+            <h2>Tambahkan Buku</h2>  
+            <form method="POST">  
+                <input type="text" name="book_title" placeholder="Judul Buku" required>  
+                <input type="text" name="book_author" placeholder="Nama Penulis" required>  
+                <button type="submit">Tambahkan</button>  
+            </form>  
+        </section>  
+
+        <section>  
+            <h2>Daftar Buku</h2>  
+            <ul>  
+                {% for book in books %}  
+                    <li><strong>{{ book.title }}</strong> oleh {{ book.author }}</li>  
+                {% else %}  
+                    <li>Tidak ada buku yang ditambahkan.</li>  
+                {% endfor %}  
+            </ul>  
+        </section>  
+    </main>  
+
+    <footer>  
+        <p>&copy; 2023 Daftar Buku. Semua hak dilindungi.</p>  
+    </footer>
+</body>  
+</html>

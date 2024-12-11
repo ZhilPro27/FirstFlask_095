@@ -1,0 +1,83 @@
+body {  
+    font-family: 'Arial', sans-serif;  
+    background-color: #f4f4f4;
+    color: #333;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+header, footer {  
+    background: url('/static/background.jpg') no-repeat center center;  
+    background-size: cover;  
+    position: relative;  
+    padding: 20px;  
+    color: white;
+}  
+
+header:after, footer:after {  
+    content: '';  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}  
+
+h1, footer p, header p {  
+    position: relative;
+    z-index: 2;
+}  
+
+main {  
+    margin: 20px;  
+}  
+
+section {  
+    background: white;  
+    border-radius: 5px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  
+    padding: 20px;  
+    margin-bottom: 20px;  
+}  
+
+form {  
+    margin-bottom: 20px;  
+}  
+
+input[type="text"] {  
+    width: calc(50% - 10px);  
+    padding: 10px;  
+    margin-right: 10px;  
+    border: 1px solid #ddd;  
+    border-radius: 5px;  
+}  
+
+button {  
+    padding: 10px 15px;  
+    background: #007bff;  
+    border: none;  
+    color: white;  
+    border-radius: 5px;  
+    cursor: pointer;  
+}  
+
+button:hover {  
+    background: #0056b3;  
+}  
+
+ul {  
+    list-style: none;  
+    padding: 0;  
+}  
+
+li {  
+    padding: 5px 0;  
+}  
+
+footer {  
+    text-align: center;  
+    padding: 20px;  
+}
+
